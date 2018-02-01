@@ -1,0 +1,61 @@
+### Mysql开启远程访问
+##### 默认情况下，mysql的用户没有远程访问的权限。
+#### 1. 方法一（改表法）：
+##### 1.1 可能是你的帐号不允许从远程登陆，只能在localhost。这个时候只要在localhost的那台电脑，登入mysql后，更改 "mysql" 数据库里的 "user" 表里的 "host" 项，从"localhost"改称"%"
+```
+update user set host = '%' where user = 'root';
+flush privileges;
+```
+#### 2. 方法二（授权法）：
+##### 2.1 赋予任何主机访问数据的权限
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
+flush privileges;
+```
+#### 2.2 赋予myuser使用mypassword从任何主机连接到mysql服务器
+```
+GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
+flush privileges;
+```
+#### 只允许用户myuser从ip为192.168.1.6的主机连接到mysql服务器，并使用mypassword作为密码
+```
+GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'192.168.1.3' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
+flush privileges;
+```
+
+### Mysql修改密码
+
+#### 方法1： 用SET PASSWORD命令 
+##### 首先登录MySQL。 
+```
+mysql> set password for 用户名@localhost = password('新密码'); 
+mysql> set password for root@localhost = password('123'); 
+```
+#### 方法2：用mysqladmin 
+```
+mysqladmin -u用户名 -p旧密码 password 新密码 
+mysqladmin -uroot -p123456 password 123 
+```
+
+#### 方法3：用UPDATE直接编辑user表 
+##### 首先登录MySQL。
+``` 
+mysql> use mysql; 
+mysql> update user set password=password('123') where user='root' and host='localhost'; 
+mysql> flush privileges; 
+```
+
+#### 方法4：在忘记root密码的时候，可以这样 
+##### 以windows为例： 
+``` 
+1. 关闭正在运行的MySQL服务。 
+2. 打开DOS窗口，转到mysql\bin目录。 
+3. 输入mysqld --skip-grant-tables 回车。--skip-grant-tables 的意思是启动MySQL服务的时候跳过权限表认证。 
+4. 再开一个DOS窗口（因为刚才那个DOS窗口已经不能动了），转到mysql\bin目录。 
+5. 输入mysql回车，如果成功，将出现MySQL提示符 >。 
+6. 连接权限数据库： use mysql; 。 
+6. 改密码：update user set password=password("123") where user="root";（别忘了最后加分号） 。 
+7. 刷新权限（必须步骤）：flush privileges;　。 
+8. 退出 quit。 
+``` 
+
