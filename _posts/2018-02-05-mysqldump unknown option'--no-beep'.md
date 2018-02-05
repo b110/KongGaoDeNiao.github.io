@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mysqldump: unknown option '--no-beep' 错误解决
+title: mysqldump: unknown option '--no-beep'
 date: 2018-02-05
 categories: blog
 tags: [mysql,mysqldump]
