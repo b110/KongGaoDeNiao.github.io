@@ -1,10 +1,12 @@
 ---
+
 layout: post
 title: mysqldump: unknown option '--no-beep'
 date: 2018-02-05
 categories: blog
 tags: [mysql,mysqldump]
 description: mysqldump 命令备份数据库时，unknown option '--no-beep' 错误解决！！！
+
 ---
 
 #### 今天用 mysqldump 命令备份数据库时，出现了问题，截图如下：
