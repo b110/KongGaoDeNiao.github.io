@@ -1,15 +1,10 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: "About"
+description: "学苟知本，六经皆我注脚 "
+header-img: "img/green.jpg"
 ---
-
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+<center>
+    <p><img src="http://openmindclub.qiniudn.com/omt/WhiteAvatar.jpg" align="center"></p>
+</center>
+## 这一页填写你的自我介绍。
