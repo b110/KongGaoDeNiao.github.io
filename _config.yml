@@ -13,7 +13,7 @@ owner:
   bio: "笨方法学写作"
 
 # Data
-gavatar: http://openmindclub.qiniudn.com/omt/favicon.png
+gavatar: https://github.com/KongGaoDeNiao/KongGaoDeNiao.github.io/blob/master/img/favicon.png
 favicon: img/favicon.ico
 
 douban_username:  cnsyear
@@ -54,9 +54,9 @@ comments :
       short_name : cnsyear
 
 # Analytics and webmaster tools stuff goes here
-google_analytics: UA-80884545-1
-google_verify:
+#google_analytics: UA-80884545-1
+#google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+#bing_verify:
 
 # Links to include in footer navigation
