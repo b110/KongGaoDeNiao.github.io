@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java-org.springframework.core.convert.ConversionFailedException- 前端传string解析date异常
+title: SpringMVC前台日期作为实体类对象参数类型转换错误解决.
 date: 2018-02-06
 categories: blog
 tags: [java,springmvc]
@@ -13,7 +13,6 @@ description: 关于SpringMVC前台日期作为实体类对象参数类型转换�
 
 ```
 Field error in object 'invoiceItem' on field 'invoiceDate': rejected value [2018-01-29]; codes [typeMismatch.invoiceItem.invoiceDate,typeMismatch.invoiceDate,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [invoiceItem.invoiceDate,invoiceDate]; arguments []; default message [invoiceDate]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'invoiceDate'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@com.baomidou.mybatisplus.annotations.TableField java.util.Date] for value '2018-01-29'; nested exception is java.lang.IllegalArgumentException]
-
 
 ```
 异常场景描述:
