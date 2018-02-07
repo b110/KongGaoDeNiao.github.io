@@ -29,5 +29,23 @@ Field error in object 'invoiceItem' on field 'invoiceDate': rejected value [2018
  private Date invoiceDate; 
 ```
 
+
+Controller层注意要加@Valid!!!!这个注解来验证!!!
+
+```
+/**
+     * 新增发票子项管理
+     */
+    @RequestMapping(value = "/add")
+    @ResponseBody
+    public Object add(@Valid InvoiceItemDto invoiceItem,BindingResult result) throws InvocationTargetException, IllegalAccessException {
+        if (result.hasErrors()) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        invoiceItemService.saveInvoiceItem(invoiceItem);
+        return super.SUCCESS_TIP;
+    }
+```
+
 参考文章：
 [http://blog.csdn.net/pyfysf/article/details/79124189](http://blog.csdn.net/pyfysf/article/details/79124189)
