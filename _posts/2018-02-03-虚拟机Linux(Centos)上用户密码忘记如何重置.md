@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 虚拟机Linux(Centos)上用户密码忘记如何重置
+title: Linux(Centos)虚拟机上用户密码忘记如何重置
 date: 2018-02-03
 categories: blog
 tags: [liunx]
-description: 虚拟机Linux(Centos)上用户密码忘记了怎么办。
+description: Linux(Centos)虚拟机上用户密码忘记了怎么办。
 ---
 
-我们有时会忘记虚拟机上的登陆密码,今天来说一下怎样修改我们的密码.应该对大多数的linux版本都有帮助.
+### 我们有时会忘记虚拟机上的登陆密码,今天来说一下怎样修改我们的密码.应该对大多数的linux版本都有帮助.
 - step1:启动虚拟机，出现下面的倒计时界面时，按键盘上的e键. 
 （说明：要确保光标此时已经在虚拟机内了，要不然，按了e键，也是在windows内，无效。e代表edit，启动前编辑）
 红字对小白很重要再说一遍! ! !
